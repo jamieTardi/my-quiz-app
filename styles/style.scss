@@ -1,82 +1,88 @@
 @import './global-styles';
 
-.title{
+.title {
     text-align: center;
     margin: 2rem 0rem;
 }
 
-.card-container{
+.card-container {
     height: 87vh;
     width: 100vw;
     @include flex-center;
-    
+
 }
 
-.quiz-card{
+.quiz-card {
     position: relative;
     min-height: 40vh;
     min-width: 40vw;
     border: lightgrey 2px solid;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.5),
-            10px 10px 15px rgba(0,0,0,0.5),
-            -1px -1px 30px rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5),
+        10px 10px 15px rgba(0, 0, 0, 0.5),
+        -1px -1px 30px rgba(0, 0, 0, 0.2);
     @include flex-column;
-    .start-button{
+
+    .start-button {
         min-width: 20vw;
         font-size: 2rem;
-        
-    }     
+
+    }
 }
 
 .hide-startBtn {
     display: none;
 }
 
-.button-container{
+.button-container {
     min-height: 20vh;
     width: 100%;
     @include flex-center
 }
 
-.answer-grp-1{
+.answer-grp-1 {
     @include flex-column;
     position: relative;
     padding-right: 8rem;
-    .answer1{
+
+    .answer1 {
         margin-bottom: 4rem
     }
+
     .answer1,
-    .answer2{
+    .answer2 {
         margin-left: 2rem
     }
 }
 
-.answer-grp-2{
+.answer-grp-2 {
     @include flex-column;
-    
-    .answer3{
+
+    .answer3 {
         margin-bottom: 4rem;
     }
+
     .answer3,
-    .answer4{
+    .answer4 {
         margin-right: 2rem
     }
 }
 
 .answer-grp-1,
-.answer-grp-2{
+.answer-grp-2 {
     margin-bottom: 3rem
 }
 
-.answer-buttons{
+.answer-buttons {
     font-size: 1.5rem;
     padding: 1rem 2rem;
 
 }
-.hide{
+
+.hide {
     display: none;
 }
-.submit-answer{
+
+.submit-answer {
     position: absolute;
     bottom: 0px;
     width: 100%;
@@ -84,4 +90,3 @@
     padding: 1rem 0rem;
     margin-top: 1rem;
 }
-
