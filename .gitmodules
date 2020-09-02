@@ -1,0 +1,3 @@
+[submodule "path_to_submodule"] 
+  path = my-quiz-app
+  url = https://github.com/jamieTardi/my-quiz-app.git
