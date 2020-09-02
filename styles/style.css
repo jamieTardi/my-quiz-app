@@ -9,13 +9,35 @@ html {
   font-family: 'Roboto', sans-serif;
 }
 
+html {
+  z-index: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#2980b9), to(#6dd5fa));
+  background: linear-gradient(to right, #2980b9, #6dd5fa);
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
+}
+
+.title-container {
+  min-height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .title {
-  text-align: center;
-  margin: 2rem 0rem;
+  height: 10vh;
+  width: 20vw;
 }
 
 .card-container {
-  height: 87vh;
+  height: 67vh;
   width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -29,10 +51,12 @@ html {
 }
 
 .quiz-card {
+  z-index: 1;
+  background: #eeeeee;
   position: relative;
   min-height: 40vh;
   min-width: 40vw;
-  border: lightgrey 2px solid;
+  border: none;
   -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 10px 10px 15px rgba(0, 0, 0, 0.5), -1px -1px 30px rgba(0, 0, 0, 0.2);
           box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 10px 10px 15px rgba(0, 0, 0, 0.5), -1px -1px 30px rgba(0, 0, 0, 0.2);
   display: -webkit-box;
@@ -124,12 +148,19 @@ html {
 
 .answer-grp-1,
 .answer-grp-2 {
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 
-.answer-buttons {
+.answer-buttons,
+.start-button {
   font-size: 1.5rem;
   padding: 1rem 2rem;
+  min-width: 20vw;
+  border: none;
+  background: -webkit-gradient(linear, left top, right top, from(#56ab2f), to(#a8e063));
+  background: linear-gradient(to right, #56ab2f, #a8e063);
+  cursor: pointer;
+  color: white;
 }
 
 .hide {
@@ -142,6 +173,9 @@ html {
   width: 100%;
   right: 0%;
   padding: 1rem 0rem;
-  margin-top: 1rem;
+  border: none;
+  background: #236893;
+  color: white;
+  font-size: 1.5rem;
 }
 /*# sourceMappingURL=style.css.map */

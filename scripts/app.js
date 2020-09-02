@@ -14,50 +14,46 @@ startQuiz = () => {
     startBtn.classList.add('hide-startBtn')
     answerBtns.classList.remove('hide')
     submitBtn.classList.remove('hide')
-    nextQuestion() 
+    nextQuestion()
 }
 
 
 
 
 correctAnswer = () => {
-    if(randomQuestion.answers[0].correctAnswer === false){
+    if (randomQuestion.answers[0].correctAnswer === false) {
         console.log('answer 1 wrong')
-    }
-    else if(randomQuestion.answers[0].correctAnswer === true){
+    } else if (randomQuestion.answers[0].correctAnswer === true) {
         console.log('answer 1 works')
     }
-    nextQuestion()
-    
-} 
+
+
+}
 correctAnswer2 = () => {
-    if(randomQuestion.answers[1].correctAnswer === false){
+    if (randomQuestion.answers[1].correctAnswer === false) {
         console.log('answer 2 wrong')
-    }
-    else if(randomQuestion.answers[1].correctAnswer === true){
+    } else if (randomQuestion.answers[1].correctAnswer === true) {
         console.log('answer 2 works')
     }
-    nextQuestion()
+
 }
 
 correctAnswer3 = () => {
-    if(randomQuestion.answers[2].correctAnswer === false){
+    if (randomQuestion.answers[2].correctAnswer === false) {
         console.log('answer 3 wrong')
-    }
-    else if(randomQuestion.answers[2].correctAnswer === true){
+    } else if (randomQuestion.answers[2].correctAnswer === true) {
         console.log('answer 3 works')
     }
-    nextQuestion()
+
 }
 
 correctAnswer4 = () => {
-    if(randomQuestion.answers[3].correctAnswer === false){
+    if (randomQuestion.answers[3].correctAnswer === false) {
         console.log('wrong')
-    }
-    else if(randomQuestion.answers[3].correctAnswer === true){
+    } else if (randomQuestion.answers[3].correctAnswer === true) {
         alert('answer 4 works')
     }
-    nextQuestion()
+
 }
 nextQuestion = () => {
     randomQuestion = questions[Math.floor(Math.random() * questions.length)]
@@ -69,53 +65,86 @@ nextQuestion = () => {
 
 }
 
-
-
-
-
-   
-   
-
-
-
-
-
 //questions
 let questions = [{
         question: 'What is 2 + 2',
-        answers: [
-        {answer1: '4', correctAnswer: true},
-        {answer2: '5', correctAnswer: false},
-        {answer3: '6', correctAnswer: false},
-        {answer4: '7', correctAnswer: false}
+        answers: [{
+                answer1: '4',
+                correctAnswer: true
+            },
+            {
+                answer2: '5',
+                correctAnswer: false
+            },
+            {
+                answer3: '6',
+                correctAnswer: false
+            },
+            {
+                answer4: '7',
+                correctAnswer: false
+            }
         ]
     },
     {
         question: 'What is 3 + 3',
-        answers: [
-            {answer1: '9', correctAnswer: false},
-            {answer2: '8', correctAnswer: false},
-            {answer3: '6', correctAnswer: true},
-            {answer4: '100', correctAnswer: false}
-            ]
+        answers: [{
+                answer1: '9',
+                correctAnswer: false
+            },
+            {
+                answer2: '8',
+                correctAnswer: false
+            },
+            {
+                answer3: '6',
+                correctAnswer: true
+            },
+            {
+                answer4: '100',
+                correctAnswer: false
+            }
+        ]
     },
     {
         question: 'Is this awesome?',
-        answers: [
-            {answer1: 'yes', correctAnswer: true},
-            {answer2: 'no', correctAnswer: false},
-            {answer3: 'maybe', correctAnswer: false},
-            {answer4: 'cheese?', correctAnswer: false}
-            ]
+        answers: [{
+                answer1: 'yes',
+                correctAnswer: true
+            },
+            {
+                answer2: 'no',
+                correctAnswer: false
+            },
+            {
+                answer3: 'maybe',
+                correctAnswer: false
+            },
+            {
+                answer4: 'cheese?',
+                correctAnswer: false
+            }
+        ]
     },
     {
         question: 'What is a boolean?',
-        answers: [
-            {answer1: 'A true statement', correctAnswer: false},
-            {answer2: 'A false statement', correctAnswer: false},
-            {answer3: 'True/False Statement', correctAnswer: true},
-            {answer4: 'cheese?', correctAnswer: false}
-            ]
+        answers: [{
+                answer1: 'A true statement',
+                correctAnswer: false
+            },
+            {
+                answer2: 'A false statement',
+                correctAnswer: false
+            },
+            {
+                answer3: 'True/False Statement',
+                correctAnswer: true
+            },
+            {
+                answer4: 'cheese?',
+                correctAnswer: false
+            }
+        ]
     }
 
 ]
@@ -126,7 +155,7 @@ startBtn.addEventListener('click', startQuiz)
 submitBtn.addEventListener('click', nextQuestion)
 
 answerBtn1.addEventListener('click', correctAnswer)
-    answerBtn2.addEventListener('click', correctAnswer2)
-    answerBtn3.addEventListener('click', correctAnswer3)
-    answerBtn4.addEventListener('click', correctAnswer4)
+answerBtn2.addEventListener('click', correctAnswer2)
+answerBtn3.addEventListener('click', correctAnswer3)
+answerBtn4.addEventListener('click', correctAnswer4)
 let randomQuestion;
