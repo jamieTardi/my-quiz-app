@@ -3,9 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quizzicle!</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+    <script defer src="./scripts/app.js"></script>
 </head>
 <body>
-    
+    <div class="container">
+<h1 class="title">Quizzicle!</h1>
+<div class="card-container">
+    <div class="quiz-card">
+        <h3 class="question">To start the quiz Click Below</h3>
+        <button class="start-button">Start!</button>
+        <div class="button-container hide"> 
+            <div class="answer-grp-1">
+        <button class="answer1 answer-buttons">Answer 1</button>
+        <button class="answer2 answer-buttons">Answer 2</button>
+    </div>
+    <div class="answer-grp-2">
+        <button class="answer3 answer-buttons">Answer 3</button>
+        <button class="answer4 answer-buttons">Answer 4</button>
+    </div>
+    </div>
+    <button class="submit-answer hide">Submit Answer</button>
+    </div>
+</div>
+
+    </div>
 </body>
 </html>
