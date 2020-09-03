@@ -7,6 +7,7 @@ const answerBtn2 = document.querySelector('.answer2');
 const answerBtn3 = document.querySelector('.answer3');
 const answerBtn4 = document.querySelector('.answer4');
 const submitBtn = document.querySelector('.submit-answer');
+const buttonGrp = document.querySelectorAll('.answer-buttons');
 
 //start function
 
@@ -17,41 +18,67 @@ startQuiz = () => {
     nextQuestion()
 }
 
-
-
-
 correctAnswer = () => {
-    if (randomQuestion.answers[0].correctAnswer === false) {
-        console.log('answer 1 wrong')
-    } else if (randomQuestion.answers[0].correctAnswer === true) {
-        console.log('answer 1 works')
+    if (randomQuestion.answers[0].correctAnswer === true) {
+        answerBtn1.classList.remove('background-color')
+        answerBtn2.classList.remove('background-color')
+        answerBtn3.classList.remove('background-color')
+        answerBtn4.classList.remove('background-color')
+        answerBtn1.classList.add('correct')
+        answerBtn2.classList.add('incorrect')
+        answerBtn3.classList.add('incorrect')
+        answerBtn4.classList.add('incorrect')
+
+    } else{
+        alert('wrong')
     }
-
-
 }
 correctAnswer2 = () => {
-    if (randomQuestion.answers[1].correctAnswer === false) {
-        console.log('answer 2 wrong')
-    } else if (randomQuestion.answers[1].correctAnswer === true) {
-        console.log('answer 2 works')
+    if (randomQuestion.answers[1].correctAnswer === true) {
+        answerBtn1.classList.remove('background-color')
+        answerBtn2.classList.remove('background-color')
+        answerBtn3.classList.remove('background-color')
+        answerBtn4.classList.remove('background-color')
+        answerBtn1.classList.add('incorrect')
+        answerBtn2.classList.add('correct')
+        answerBtn3.classList.add('incorrect')
+        answerBtn4.classList.add('incorrect')
+    }
+    else{
+        alert('wrong')
     }
 
 }
 
 correctAnswer3 = () => {
-    if (randomQuestion.answers[2].correctAnswer === false) {
-        console.log('answer 3 wrong')
-    } else if (randomQuestion.answers[2].correctAnswer === true) {
-        console.log('answer 3 works')
+    if (randomQuestion.answers[2].correctAnswer === true) {
+        answerBtn1.classList.remove('background-color')
+        answerBtn2.classList.remove('background-color')
+        answerBtn3.classList.remove('background-color')
+        answerBtn4.classList.remove('background-color')
+        answerBtn1.classList.add('incorrect')
+        answerBtn2.classList.add('incorrect')
+        answerBtn3.classList.add('correct')
+        answerBtn4.classList.add('incorrect')
     }
-
+    else{
+        alert('wrong')
+    }
 }
 
 correctAnswer4 = () => {
-    if (randomQuestion.answers[3].correctAnswer === false) {
-        console.log('wrong')
-    } else if (randomQuestion.answers[3].correctAnswer === true) {
-        alert('answer 4 works')
+    if (randomQuestion.answers[3].correctAnswer === true) {
+        answerBtn1.classList.remove('background-color')
+        answerBtn2.classList.remove('background-color')
+        answerBtn3.classList.remove('background-color')
+        answerBtn4.classList.remove('background-color')
+        answerBtn1.classList.add('incorrect')
+        answerBtn2.classList.add('incorrect')
+        answerBtn3.classList.add('incorrect')
+        answerBtn4.classList.add('correct')
+    }
+    else{
+        alert('wrong')
     }
 
 }
@@ -62,6 +89,17 @@ nextQuestion = () => {
     answerBtn2.innerText = randomQuestion.answers[1].answer2
     answerBtn3.innerText = randomQuestion.answers[2].answer3
     answerBtn4.innerText = randomQuestion.answers[3].answer4
+
+    buttonGrp.forEach((button) => {
+        button.classList.remove('correct')
+        button.classList.remove('incorrect')
+        button.classList.add('background-color')
+    })
+
+   
+
+    
+
 
 }
 
