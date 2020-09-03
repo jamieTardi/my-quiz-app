@@ -10,6 +10,8 @@ const submitBtn = document.querySelector('.submit-answer');
 const buttonGrp = document.querySelectorAll('.answer-buttons');
 const popup = document.querySelector('.popup-container')
 const tryBtn = document.querySelector('.try-again')
+const score = document.querySelector('.score')
+let newScore = 1
 
 //start function
 
@@ -30,6 +32,8 @@ correctAnswer = () => {
         answerBtn2.classList.add('incorrect')
         answerBtn3.classList.add('incorrect')
         answerBtn4.classList.add('incorrect')
+        score.innerText = newScore
+        newScore++
 
     } else{
         popup.classList.add('active')
@@ -45,6 +49,8 @@ correctAnswer2 = () => {
         answerBtn2.classList.add('correct')
         answerBtn3.classList.add('incorrect')
         answerBtn4.classList.add('incorrect')
+        score.innerText = newScore
+        newScore++
     }
     else{
         popup.classList.add('active')
@@ -62,6 +68,8 @@ correctAnswer3 = () => {
         answerBtn2.classList.add('incorrect')
         answerBtn3.classList.add('correct')
         answerBtn4.classList.add('incorrect')
+        score.innerText = newScore
+        newScore++
     }
     else{
         popup.classList.add('active')
@@ -78,6 +86,8 @@ correctAnswer4 = () => {
         answerBtn2.classList.add('incorrect')
         answerBtn3.classList.add('incorrect')
         answerBtn4.classList.add('correct')
+        score.innerText = newScore
+        newScore++
     }
     else{
         popup.classList.add('active')
@@ -97,12 +107,6 @@ nextQuestion = () => {
         button.classList.remove('incorrect')
         button.classList.add('background-color')
     })
-
-   
-
-    
-
-
 }
 
 //questions

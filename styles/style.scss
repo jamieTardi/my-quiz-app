@@ -17,12 +17,18 @@ html{
     
 }
 
+
 .card-container {
     height: 67vh;
     width: 100vw;
     @include flex-center;
+    position: relative;
     
 
+}
+.score-text{
+    position: absolute;
+    top: 1rem;
 }
 
 .quiz-card {
