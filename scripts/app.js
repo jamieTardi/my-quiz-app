@@ -8,6 +8,8 @@ const answerBtn3 = document.querySelector('.answer3');
 const answerBtn4 = document.querySelector('.answer4');
 const submitBtn = document.querySelector('.submit-answer');
 const buttonGrp = document.querySelectorAll('.answer-buttons');
+const popup = document.querySelector('.popup-container')
+const tryBtn = document.querySelector('.try-again')
 
 //start function
 
@@ -30,7 +32,7 @@ correctAnswer = () => {
         answerBtn4.classList.add('incorrect')
 
     } else{
-        alert('wrong')
+        popup.classList.add('active')
     }
 }
 correctAnswer2 = () => {
@@ -45,7 +47,7 @@ correctAnswer2 = () => {
         answerBtn4.classList.add('incorrect')
     }
     else{
-        alert('wrong')
+        popup.classList.add('active')
     }
 
 }
@@ -62,7 +64,7 @@ correctAnswer3 = () => {
         answerBtn4.classList.add('incorrect')
     }
     else{
-        alert('wrong')
+        popup.classList.add('active')
     }
 }
 
@@ -78,7 +80,7 @@ correctAnswer4 = () => {
         answerBtn4.classList.add('correct')
     }
     else{
-        alert('wrong')
+        popup.classList.add('active')
     }
 
 }
@@ -196,4 +198,7 @@ answerBtn1.addEventListener('click', correctAnswer)
 answerBtn2.addEventListener('click', correctAnswer2)
 answerBtn3.addEventListener('click', correctAnswer3)
 answerBtn4.addEventListener('click', correctAnswer4)
+tryBtn.addEventListener('click', () => {
+    popup.classList.remove('active')
+})
 let randomQuestion;
