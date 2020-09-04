@@ -1,5 +1,4 @@
 
-
 //variables
 const startBtn = document.querySelector('.start-button');
 const questionText = document.querySelector('.question');
@@ -10,14 +9,13 @@ const answerBtn3 = document.querySelector('.answer3');
 const answerBtn4 = document.querySelector('.answer4');
 const submitBtn = document.querySelector('.submit-answer');
 const buttonGrp = document.querySelectorAll('.answer-buttons');
-const popup = document.querySelector('.popup-container')
-const tryBtn = document.querySelector('.try-again')
-const score = document.querySelector('.score')
-const winner = document.querySelector('.winner-container')
-const playAgain = document.querySelector('.play-again')
-
+const popup = document.querySelector('.popup-container');
+const tryBtn = document.querySelector('.try-again');
+const score = document.querySelector('.score');
+const winner = document.querySelector('.winner-container');
+const playAgain = document.querySelector('.play-again');
 let newScore;
-
+let randomQuestion;
 
 
 //start function
@@ -318,4 +316,3 @@ playAgain.addEventListener('click', () => {
     startQuiz()
     
 })
-let randomQuestion;
