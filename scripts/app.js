@@ -14,7 +14,7 @@ const tryBtn = document.querySelector('.try-again');
 const score = document.querySelector('.score');
 const winner = document.querySelector('.winner-container');
 const playAgain = document.querySelector('.play-again');
-let newScore;
+let newScore = 1;
 let randomQuestion;
 
 
@@ -24,7 +24,7 @@ startQuiz = () => {
     startBtn.classList.add('hide-startBtn')
     answerBtns.classList.remove('hide')
     submitBtn.classList.remove('hide')
-    newScore = 1
+    score.innerText = 0
     nextQuestion()
 }
 
