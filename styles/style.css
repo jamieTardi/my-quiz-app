@@ -297,5 +297,12 @@ html {
         -ms-flex-align: center;
             align-items: center;
   }
+  .quiz-card {
+    text-align: center;
+  }
+  .quiz-card .question {
+    font-size: 18px;
+    padding: 0rem 0.5rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -209,4 +209,13 @@ z-index: 2;
         gap: 2rem;
         align-items: center;
     }
+    .quiz-card{
+        text-align: center;
+        .question{
+            font-size: 18px;
+            padding: 0rem 0.5rem;
+                
+            
+        }
+    }
 }
