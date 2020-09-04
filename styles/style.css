@@ -202,7 +202,8 @@ html {
   cursor: pointer;
 }
 
-.popup {
+.popup,
+.winner {
   background: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -222,17 +223,20 @@ html {
   min-width: 30vh;
 }
 
-.popup-container.active {
+.popup-container.active,
+.winner-container.active {
   opacity: 1;
   pointer-events: all;
 }
 
-.popup.active {
+.popup.active,
+.winner.active {
   -webkit-transform: rotateY();
           transform: rotateY();
 }
 
-.popup-container {
+.popup-container,
+.winner-container {
   position: fixed;
   top: 0%;
   left: 0%;
@@ -255,11 +259,13 @@ html {
   z-index: 2;
 }
 
-.poop {
+.poop,
+.party {
   font-size: 2rem;
 }
 
-.try-again {
+.try-again,
+.play-again {
   border: none;
   background: #3E9BCD;
   color: white;
