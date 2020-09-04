@@ -33,6 +33,7 @@ html {
       -ms-flex-align: center;
           align-items: center;
   font-family: 'Lobster', cursive;
+  color: white;
 }
 
 .title {
