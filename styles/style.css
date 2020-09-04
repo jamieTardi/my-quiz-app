@@ -299,6 +299,7 @@ html {
   }
   .quiz-card {
     text-align: center;
+    min-width: 80vw;
   }
   .quiz-card .question {
     font-size: 18px;
