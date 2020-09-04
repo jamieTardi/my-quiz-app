@@ -7,7 +7,8 @@ html{
 }
 .title-container{
     min-height: 20vh;
-    @include flex-center;
+    @include flex-column;
+    font-family: 'Lobster', cursive;
     
 }
 
@@ -187,4 +188,25 @@ z-index: 2;
     cursor: pointer;
 }
 
+@media (max-width: 600px){
+    .quiz-card{
+        margin: 0rem 2rem
+    }
 
+    .answer-grp-1{
+        padding-right: 0rem;
+    }
+
+    .answer-grp-2{
+        padding-right: 0rem;
+    }
+
+    .answer-buttons{
+        font-size: 14px;
+        min-width: 75px;
+    }
+    .button-container{
+        gap: 2rem;
+        align-items: center;
+    }
+}

@@ -23,12 +23,16 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: 'Lobster', cursive;
 }
 
 .title {
@@ -271,5 +275,27 @@ html {
   color: white;
   padding: 0.5rem 1rem;
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .quiz-card {
+    margin: 0rem 2rem;
+  }
+  .answer-grp-1 {
+    padding-right: 0rem;
+  }
+  .answer-grp-2 {
+    padding-right: 0rem;
+  }
+  .answer-buttons {
+    font-size: 14px;
+    min-width: 75px;
+  }
+  .button-container {
+    gap: 2rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */
